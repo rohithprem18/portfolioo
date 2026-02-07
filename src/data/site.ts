@@ -43,7 +43,7 @@ export const projects = [
       'A full-stack platform for managing courses, learners, and instructor workflows with role-based access and performance-focused APIs.',
     impact: 'Reduced manual administration with automated enrollment and reporting flows.',
     stack: ['Java', 'Spring Boot', 'MySQL'],
-    link: '#',
+    link: 'https://github.com/rohithprem18/online-course-management-system',
   },
   {
     title: 'AI-Driven Inventory Optimization',
@@ -51,7 +51,7 @@ export const projects = [
       'Forecasting pipeline that blends statistical and deep learning models to minimize stockouts and carrying costs.',
     impact: 'Improved inventory planning accuracy through hybrid ARIMA + LSTM forecasting.',
     stack: ['Python', 'ARIMA', 'LSTM'],
-    link: '#',
+    link: 'https://github.com/rohithprem18/AI-Driven-Inventory-Optimization',
   },
   {
     title: 'Ethereum Fraud Detection',
@@ -59,7 +59,7 @@ export const projects = [
       'A fraud detection system using feature engineering on blockchain transactions and supervised learning models.',
     impact: 'Enhanced anomaly detection for high-risk Ethereum wallets and transactions.',
     stack: ['Python', 'Scikit-learn', 'Blockchain'],
-    link: '#',
+    link: 'https://github.com/rohithprem18/Ethereum-Fraud-Fetection-ML',
   },
 ]
 
