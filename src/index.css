@@ -1,0 +1,87 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 0 0% 100%;
+  --bg-soft: 210 20% 98%;
+  --text: 222 47% 11%;
+  --muted: 215 18% 35%;
+  --card: 0 0% 100%;
+  --border: 214 20% 90%;
+  --accent: 218 82% 56%;
+  --accent-2: 265 83% 60%;
+  --shadow: 220 40% 20% / 0.08;
+}
+
+.dark {
+  --bg: 222 47% 6%;
+  --bg-soft: 222 42% 10%;
+  --text: 210 40% 96%;
+  --muted: 215 18% 70%;
+  --card: 222 47% 9%;
+  --border: 215 27% 18%;
+  --accent: 198 88% 60%;
+  --accent-2: 268 90% 70%;
+  --shadow: 220 40% 2% / 0.35;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
+  background-color: hsl(var(--bg));
+  color: hsl(var(--text));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.2);
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-border bg-card shadow-[0_20px_60px_-45px_hsl(var(--shadow))] backdrop-blur;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-muted;
+  }
+
+  .gradient-border {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 1.25rem;
+    background: linear-gradient(135deg, hsl(var(--accent) / 0.6), hsl(var(--accent-2) / 0.4));
+    z-index: -1;
+    opacity: 0.35;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
